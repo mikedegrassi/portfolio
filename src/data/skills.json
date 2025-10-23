@@ -1,0 +1,45 @@
+{
+    "programmingAndFrameworks": [
+      { "name": "Pixi.js", "icon": "pixi.png" },
+      { "name": "Express.js", "icon": "express.png" },
+      { "name": "C#", "icon": "csharp.png" },
+      { "name": "CSS", "icon": "css.png" },
+      { "name": "PHP", "icon": "php.png" },
+      { "name": "JavaScript", "icon": "javascript.png" },
+      { "name": "Node.js", "icon": "node.png" },
+      { "name": ".NET Core", "icon": "netcore.png" },
+      { "name": "Bootstrap", "icon": "bootstrap.png" },
+      { "name": "Unreal Engine 5", "icon": "unreal.png" },
+      { "name": "Laravel", "icon": "laravel.png" },
+      { "name": "React.js", "icon": "react.png" },
+      { "name": "HTML", "icon": "html.png" },
+      { "name": "Native.js", "icon": "native.png" },
+      { "name": "TypeScript", "icon": "typescript.png"},
+      { "name": "Vue.js", "icon": "vue.png"},
+      { "name": "Expo", "icon": "expo.png"},
+      { "name": "WordPress", "icon": "wordpress.png" }
+    ],
+    "design": [
+      { "name": "Figma", "icon": "figma.png" },
+      { "name": "Spline", "icon": "spline.png" },
+      { "name": "iMovie", "icon": "imovie.png" },
+      { "name": "Canva", "icon": "canva.png" },
+      { "name": "CapCut", "icon": "capcut.png" },
+      { "name": "Miro", "icon": "miro.png" }
+    ],
+    "databaseAndApi": [
+      { "name": "MongoDB", "icon": "mongo.png" },
+      { "name": "Postman", "icon": "postman.png" },
+      { "name": "Firebase", "icon": "firebase.png" },
+      { "name": "MySQL", "icon": "mysql.png" },
+      { "name": "MariaDB", "icon": "maria.png" },
+      { "name": "Supabase", "icon": "supabase.png" },
+      { "name": "Lucidchart", "icon": "lucidchart.png" }
+    ],
+    "languages": [
+      { "name": "Nederlands", "icon": "nederlands.png", "status": "native",   "cefr": "C2" },
+      { "name": "Engels", "icon": "engels.png", "status": "fluent",   "cefr": "B2" },
+      { "name": "Frans", "icon": "frans.png", "status": "learning", "cefr": "A1" },
+      { "name": "Italiaans", "icon": "italiaans.png", "status": "learning", "cefr": "A2-B1" }
+    ]
+  }

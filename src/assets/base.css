@@ -1,0 +1,156 @@
+/* Palette */
+:root {
+  /* core */
+  --color-bg: #181818;
+  --color-primary: #7fb9ff;
+  --color-primary-hover: #95c4ff;
+
+  /* text */
+  --color-text: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-muted: #828282;
+
+  /* effects */
+  --shadow-glow: 0 0 20px rgba(127, 185, 255, 0.35);
+  --shadow-glow-soft: 0 0 10px rgba(127, 185, 255, 0.2);
+}
+
+/* ===== Base reset/style ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font:
+    15px/1.6 'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Button (set plain) */
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Typografie */
+h1,
+h2,
+h3 {
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.muted {
+  color: var(--color-text-muted);
+}
+
+/* Containers */
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Card */
+.card {
+  background: var(--color-primary);
+  border-radius: 30px;
+  padding: 20px;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+.card:hover {
+  transform: translate(-4px, -2px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Tags (pill) – “bultje” effect */
+.tag {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #7fb9ff;
+  color: #0b1020; /* leesbaarheid */
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.25),
+    /* donker rechts-onder */ -4px -4px 8px rgba(255, 255, 255, 0.15); /* licht links-boven */
+}
+
+/* Inputs / textareas */
+input,
+textarea {
+  width: 100%;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(127, 185, 255, 0.2);
+}
+
+/* Utility */
+.section {
+  padding: 64px 0;
+}
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 24px 0;
+}
