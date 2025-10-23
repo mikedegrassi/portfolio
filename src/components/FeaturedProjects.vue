@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import projects from '@/data/projects.json' // [{ id, title, description, image, url, highlight }]
+import projects from '../data/projects.json' // [{ id, title, description, image, url, highlight }]
 
 /* Neem de eerste 3 highlights; pas aan zoals jij wilt */
 const items = computed(() =>
