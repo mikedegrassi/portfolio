@@ -9,6 +9,9 @@ const items = computed(() =>
 
 const active = ref(0) // altijd eentje open (index 0)
 const setActive = (i) => (active.value = i)
+
+const imgSrc = (file) =>
+  new URL(`../assets/images/${file}`, import.meta.url).href
 </script>
 
 <template>
@@ -21,7 +24,7 @@ const setActive = (i) => (active.value = i)
                     :class="i === active ? 'card--active' : 'card--collapsed'" @click="setActive(i)" role="button"
                     :aria-expanded="(i === active).toString()" tabindex="0" @keyup.enter="setActive(i)">
                     <div class="media">
-                        <img :src="p.image" :alt="p.title" />
+                        <img :src="imgSrc(p.image)" :alt="p.title" />
                     </div>
 
                     <div class="content">

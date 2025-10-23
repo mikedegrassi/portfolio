@@ -3,7 +3,7 @@
       "id": 1,
       "title": "Ticketing Platform",
       "description": "Een onafhankelijk ticketsysteem met clean UI, snelle search en QR entry.",
-      "image": "./src/assets/images/ticket.png",
+      "image": "ticket.png",
       "url": "https://example.com/ticketing",
       "highlight": true
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "title": "AI Chat Assistant",
       "description": "Experimentele assistant met conversatie en context, gebouwd in Vue.",
-      "image": "./src/assets/images/chat.png",
+      "image": "chat.png",
       "url": "https://example.com/ai",
       "highlight": true
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Portfolio Redesign",
       "description": "Minimal, snel en met focus op typografie en micro-interacties.",
-      "image": "./src/assets/images/portfolio.png",
+      "image": "portfolio.png",
       "url": "https://example.com/portfolio",
       "highlight": true
     }
