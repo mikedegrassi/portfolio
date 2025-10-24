@@ -129,8 +129,12 @@ const paddedLanguages = computed(() => {
     position: relative;
     box-shadow: 0 18px 28px rgba(0, 0, 0, 0.35);
     color: #fff;
-    margin: auto;
-    width: 50%;
+
+    /* ✅ fluid by default */
+    width: 100%;
+    max-width: 780px;
+    /* or 960px if you prefer tighter */
+    margin: 0 auto;
 }
 
 /* Header */
@@ -262,16 +266,18 @@ const paddedLanguages = computed(() => {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .panel {
+        padding: 18px;
+        max-width: 100%;
     }
 
-    .panel {
-        width: 100%;
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 560px) {
+
     .panel {
         padding: 18px;
     }

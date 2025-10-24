@@ -1,48 +1,58 @@
 <script setup>
 import { ref, computed } from 'vue'
-import projects from '../data/projects.json' // [{ id, title, description, image, url, highlight }]
+import projects from '../data/projects.json'
 
-/* Neem de eerste 3 highlights; pas aan zoals jij wilt */
-const items = computed(() =>
-    projects.filter(p => p.highlight).slice(0, 3)
-)
+// 1) Grab all images in the folder and get their final URLs
+const imageMap = import.meta.glob('../assets/images/*', {
+  eager: true,
+  as: 'url'
+})
+// helper that returns the bundled URL for a filename from JSON
+const imgSrc = (file) => imageMap[`../assets/images/${file}`] ?? ''
 
-const active = ref(0) // altijd eentje open (index 0)
+// 2) featured items
+const items = computed(() => projects.filter(p => p.highlight).slice(0, 3))
+const active = ref(0)
 const setActive = (i) => (active.value = i)
-
-const imgSrc = (file) =>
-  new URL(`../assets/images/${file}`, import.meta.url).href
 </script>
 
 <template>
-    <section class="highlights">
-        <div class="container">
-            <h2 class="section-title">Uitgelichte projecten</h2>
+  <section class="highlights">
+    <div class="container">
+      <h2 class="section-title">Uitgelichte projecten</h2>
 
-            <div class="cards">
-                <article v-for="(p, i) in items" :key="p.id" class="card"
-                    :class="i === active ? 'card--active' : 'card--collapsed'" @click="setActive(i)" role="button"
-                    :aria-expanded="(i === active).toString()" tabindex="0" @keyup.enter="setActive(i)">
-                    <div class="media">
-                        <img :src="imgSrc(p.image)" :alt="p.title" />
-                    </div>
+      <div class="cards">
+        <article
+          v-for="(p, i) in items"
+          :key="p.id"
+          class="card"
+          :class="i === active ? 'card--active' : 'card--collapsed'"
+          @click="setActive(i)"
+          role="button"
+          :aria-expanded="(i === active).toString()"
+          tabindex="0"
+          @keyup.enter="setActive(i)"
+        >
+          <div class="media">
+            <img :src="imgSrc(p.image)" :alt="p.title" />
+          </div>
 
-                    <div class="content">
-                        <div>
-                            <h3 class="title">{{ p.title }}</h3>
-                            <p class="desc muted">{{ p.description }}</p>
-                        </div>
-
-                        <div class="actions" v-if="p.url">
-                            <a class="btn btn--primary" :href="p.url" target="_blank" rel="noopener">
-                                <span>Bekijk project</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
+          <div class="content">
+            <div>
+              <h3 class="title">{{ p.title }}</h3>
+              <p class="desc muted">{{ p.description }}</p>
             </div>
-        </div>
-    </section>
+
+            <div class="actions" v-if="p.url">
+              <a class="btn btn--primary" :href="p.url" target="_blank" rel="noopener">
+                <span>Bekijk project</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
