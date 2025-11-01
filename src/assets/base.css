@@ -15,6 +15,12 @@
   --shadow-glow-soft: 0 0 10px rgba(127, 185, 255, 0.2);
 }
 
+/* Oranje variant – matchend met je banner */
+.theme-orange{
+  --color-primary: #ffb066;       /* primary */
+  --color-primary-hover: #ffd0a3; /* hover/soft */
+}
+
 /* ===== Base reset/style ===== */
 *,
 *::before,
@@ -107,18 +113,6 @@ h3 {
 }
 .btn:active {
   transform: translateY(1px);
-}
-
-/* Tags (pill) – “bultje” effect */
-.tag {
-  display: inline-block;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: #7fb9ff;
-  color: #0b1020; /* leesbaarheid */
-  box-shadow:
-    4px 4px 8px rgba(0, 0, 0, 0.25),
-    /* donker rechts-onder */ -4px -4px 8px rgba(255, 255, 255, 0.15); /* licht links-boven */
 }
 
 /* Inputs / textareas */

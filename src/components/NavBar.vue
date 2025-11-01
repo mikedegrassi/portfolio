@@ -11,28 +11,28 @@ const closeMenu = () => (menuOpen.value = false)
 const cvText = ref('') // ✅ hier definieer je de variabele
 
 const updateCvText = () => {
-  cvText.value = window.innerWidth > 768
-    ? 'Curriculum Vitae | CV'
-    : 'CV'
+    cvText.value = window.innerWidth > 768
+        ? 'Curriculum Vitae | CV'
+        : 'CV'
 }
 
 // --- KEYDOWN ESCAPE ---
 const onKey = (e) => {
-  if (e.key === 'Escape') closeMenu()
+    if (e.key === 'Escape') closeMenu()
 }
 
 // --- ROUTER ---
 const router = useRouter()
 
 onMounted(() => {
-  updateCvText()
-  window.addEventListener('resize', updateCvText) // ✅ luistert naar resize
-  window.addEventListener('keydown', onKey)
+    updateCvText()
+    window.addEventListener('resize', updateCvText) // ✅ luistert naar resize
+    window.addEventListener('keydown', onKey)
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateCvText)
-  window.removeEventListener('keydown', onKey)
+    window.removeEventListener('resize', updateCvText)
+    window.removeEventListener('keydown', onKey)
 })
 
 // --- Sluit menu na navigatie ---
@@ -52,7 +52,7 @@ router.afterEach(() => closeMenu())
             <div class="actions">
                 <!-- CV download/open -->
                 <button class="btn btn--cv">
-                    <span>{{cvText}}</span>
+                    <span>{{ cvText }}</span>
                 </button>
 
                 <!-- Menu toggle -->
@@ -85,19 +85,20 @@ router.afterEach(() => closeMenu())
 
 <style scoped>
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background: transparent;
 }
 
 .nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 0;       /* verticale spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0.5rem;
+    /* verticale spacing */
 }
 
 /* Brand */
@@ -289,7 +290,7 @@ router.afterEach(() => closeMenu())
     opacity: 1;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .nav-inner {
         padding: 1.2rem 1.2rem;
     }

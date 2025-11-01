@@ -4,8 +4,8 @@ import projects from '../data/projects.json'
 
 // 1) Grab all images in the folder and get their final URLs
 const imageMap = import.meta.glob('../assets/images/*', {
-  eager: true,
-  as: 'url'
+    eager: true,
+    as: 'url'
 })
 // helper that returns the bundled URL for a filename from JSON
 const imgSrc = (file) => imageMap[`../assets/images/${file}`] ?? ''
@@ -17,42 +17,34 @@ const setActive = (i) => (active.value = i)
 </script>
 
 <template>
-  <section class="highlights">
-    <div class="container">
-      <h2 class="section-title">Uitgelichte projecten</h2>
+    <section class="highlights" id="featured-projects">
+        <div class="container">
+            <h2 class="section-title">Uitgelichte projecten</h2>
 
-      <div class="cards">
-        <article
-          v-for="(p, i) in items"
-          :key="p.id"
-          class="card"
-          :class="i === active ? 'card--active' : 'card--collapsed'"
-          @click="setActive(i)"
-          role="button"
-          :aria-expanded="(i === active).toString()"
-          tabindex="0"
-          @keyup.enter="setActive(i)"
-        >
-          <div class="media">
-            <img :src="imgSrc(p.image)" :alt="p.title" />
-          </div>
+            <div class="cards">
+                <article v-for="(p, i) in items" :key="p.id" class="card"
+                    :class="i === active ? 'card--active' : 'card--collapsed'" @click="setActive(i)" role="button"
+                    :aria-expanded="(i === active).toString()" tabindex="0" @keyup.enter="setActive(i)">
+                    <div class="media">
+                        <img :src="imgSrc(p.image)" :alt="p.title" />
+                    </div>
 
-          <div class="content">
-            <div>
-              <h3 class="title">{{ p.title }}</h3>
-              <p class="desc muted">{{ p.description }}</p>
+                    <div class="content">
+                        <div>
+                            <h3 class="title">{{ p.title }}</h3>
+                            <p class="desc muted">{{ p.description }}</p>
+                        </div>
+
+                        <div class="actions" v-if="p.url">
+                            <a class="btn btn--primary" :href="p.url" target="_blank" rel="noopener">
+                                <span>Bekijk project</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
-
-            <div class="actions" v-if="p.url">
-              <a class="btn btn--primary" :href="p.url" target="_blank" rel="noopener">
-                <span>Bekijk project</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+        </div>
+    </section>
 </template>
 
 <style scoped>

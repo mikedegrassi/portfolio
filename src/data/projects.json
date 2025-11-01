@@ -1,26 +1,56 @@
 [
-    {
-      "id": 1,
-      "title": "Ticketing Platform",
-      "description": "Een onafhankelijk ticketsysteem met clean UI, snelle search en QR entry.",
-      "image": "ticket.png",
-      "url": "https://example.com/ticketing",
-      "highlight": true
-    },
-    {
-      "id": 2,
-      "title": "AI Chat Assistant",
-      "description": "Experimentele assistant met conversatie en context, gebouwd in Vue.",
-      "image": "chat.png",
-      "url": "https://example.com/ai",
-      "highlight": true
-    },
-    {
-      "id": 3,
-      "title": "Portfolio Redesign",
-      "description": "Minimal, snel en met focus op typografie en micro-interacties.",
-      "image": "portfolio.png",
-      "url": "https://example.com/portfolio",
-      "highlight": true
-    }
-  ]
+  {
+    "id": 1,
+    "slug": "ticketing-platform",
+    "title": "Ticketing Platform",
+    "description": "Een onafhankelijk ticketsysteem met clean UI, snelle search en QR entry.",
+    "image": "ticket.png",
+    "url": "https://example.com/ticketing",
+    "highlight": true,
+
+    "problem": "Losstaande evenement-registraties, trage zoekfunctie en onduidelijke toegang.",
+    "assignment": "Ontwerp en bouw een onafhankelijk ticketsysteem met snelle zoek- en entreeflow.",
+    "role": "Full-stack: UX/UI, front-end (Vue), back-end prototyping, QA.",
+    "result": "MVP met 40% snellere entreeflow en duidelijke QR-scan validatie.",
+
+    "tech": ["Vue", "Vite", "Supabase", "Tailwind"],
+    "tags": ["SaaS", "Events"],
+    "date": "2025-06-01"
+  },
+  {
+    "id": 2,
+    "slug": "ai-chat-assistant",
+    "title": "AI Chat Assistant",
+    "description": "Experimentele assistant met conversatie en context, gebouwd in Vue.",
+    "image": "chat.png",
+    "url": "https://example.com/ai",
+    "highlight": true,
+
+    "problem": "Gebruikers raken context kwijt tijdens langere chats.",
+    "assignment": "Bouw een UI met contextvensters en snelle toolswitching.",
+    "role": "Product thinking, prototyping, front-end.",
+    "result": "Hogere task-completion; duidelijke states voor context en tool acties.",
+
+    "tech": ["Vue", "Pinia"],
+    "tags": ["AI", "Prototype"],
+    "date": "2025-05-10"
+  },
+  {
+    "id": 3,
+    "slug": "portfolio-redesign",
+    "title": "Portfolio Redesign",
+    "description": "Minimal, snel en met focus op typografie en micro-interacties.",
+    "image": "portfolio.png",
+    "url": "https://example.com/portfolio",
+    "highlight": true,
+
+    "problem": "Vorige portfolio had inconsistent grid en slechte performance.",
+    "assignment": "Herontwerp met consistente grid, betere a11y en animaties.",
+    "role": "Ontwerp + implementatie.",
+    "result": "Betere leesbaarheid, 90+ Lighthouse scores.",
+    
+    "tech": ["Vue", "Vite", "CSS"],
+    "tags": ["Design", "Frontend"],
+    "date": "2025-04-01"
+  }
+]

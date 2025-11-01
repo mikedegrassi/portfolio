@@ -4,6 +4,10 @@
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Jouw kleuren in plaats van groen */
 a {
   text-decoration: none;
@@ -130,5 +134,10 @@ a:hover {
 @media (max-width: 768px) {
   .image-shadow {
       display: none;
+  }
+
+  .image-wrap img {
+    background-color: none;
+    background: none;
   }
 }

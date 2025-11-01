@@ -19,7 +19,12 @@
                     combineer.
                 </p>
 
-                <button class="btn btn--primary"><span>Contact Me!</span></button>
+                <div class="btn-div">
+                    <a href="#featured-projects" class="btn btn--outline">
+                        <span>Lees verder</span>
+                    </a>
+                    <button class="btn btn--primary"><span>Contact Me!</span></button>
+                </div>
             </div>
 
             <!-- Scroll hint -->
@@ -41,6 +46,14 @@
 </script>
 
 <style scoped>
+.btn-div a:first-child {
+    margin-right: 20px;
+}
+
+.btn--outline:hover {
+    background: var(--color-primary-hover);
+    color: white;
+}
 
 .hero {
     position: relative;
@@ -113,56 +126,69 @@
 }
 
 /* Scroll hint: onderaan, gecentreerd, boven bg */
-.scroll-hint{
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .25rem;
-  text-transform: uppercase;
-  font-size: .85rem;
-  letter-spacing: .12em;
-  color: var(--color-text-muted);
-  z-index: 2;            /* boven overlay */
-  text-decoration: none; /* link zonder underline */
+.scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    text-transform: uppercase;
+    font-size: .85rem;
+    letter-spacing: .12em;
+    color: var(--color-text-muted);
+    z-index: 2;
+    /* boven overlay */
+    text-decoration: none;
+    /* link zonder underline */
 }
 
 /* Chevron animaties (delay 2s) */
-.scroll-hint .chev{
-  width: 22px;
-  height: 22px;
-  fill: var(--color-text-muted);
-  opacity: 0;
-  /* eerst infade, dan eindeloos bounce */
-  animation: hint-fade .4s ease 2s forwards,
-             hint-bounce 1.6s ease-in-out 2.4s infinite;
+.scroll-hint .chev {
+    width: 22px;
+    height: 22px;
+    fill: var(--color-text-muted);
+    opacity: 0;
+    /* eerst infade, dan eindeloos bounce */
+    animation: hint-fade .4s ease 2s forwards,
+        hint-bounce 1.6s ease-in-out 2.4s infinite;
 }
 
 /* Label infade met dezelfde delay */
-.scroll-hint .label{
-  opacity: 0;
-  animation: hint-fade .4s ease 2s forwards;
+.scroll-hint .label {
+    opacity: 0;
+    animation: hint-fade .4s ease 2s forwards;
 }
 
 /* Keyframes */
-@keyframes hint-fade{
-  to { opacity: 1; }
+@keyframes hint-fade {
+    to {
+        opacity: 1;
+    }
 }
-@keyframes hint-bounce{
-  0%,100% { transform: translateY(0); }
-  50%     { transform: translateY(6px); }
+
+@keyframes hint-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
 }
 
 /* Respecteer reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .scroll-hint .chev,
-  .scroll-hint .label{
-    animation: none;
-    opacity: 1;
-  }
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-hint .chev,
+    .scroll-hint .label {
+        animation: none;
+        opacity: 1;
+    }
 }
 
 /* Responsiveness */
