@@ -1,160 +1,226 @@
-/* Palette */
-:root {
-  /* core */
-  --color-bg: #181818;
-  --color-primary: #7fb9ff;
-  --color-primary-hover: #95c4ff;
+/* =========================
+   Palette
+   ========================= */
+   :root {
+    /* core */
+    --color-bg: #181818;
+    --color-primary: #7fb9ff;
+    --color-primary-hover: #95c4ff;
+  
+    /* surfaces / borders (voor inputs/kaarten) */
+    --color-surface: #1b1b1b;
+    --color-border: #2a2a2a;
+  
+    /* text */
+    --color-text: #ffffff;
+    --color-text-dark: #000000;
+    --color-text-muted: #828282;
+  
+    /* effects */
+    --shadow-glow: 0 0 20px rgba(127, 185, 255, 0.35);
+    --shadow-glow-soft: 0 0 10px rgba(127, 185, 255, 0.2);
+  }
+  
+  /* Thema-varianten */
+  .theme-orange {
+    --color-primary: #ffb066;
+    --color-primary-hover: #ffd0a3;
+  }
+  
+  .theme-red {
+    --color-primary: #db3636;        /* warm, iets gedempt rood */
+    --color-primary-hover: #f05a5a;  /* zachte hoverkleur */
+  }
+  
+  /* =========================
+     Base reset & body
+     ========================= */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: 15px/1.6 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* =========================
+     Custom cursor
+     ========================= */
+     @media (pointer: fine) {
+      html, body, body * { cursor: none !important; }
+      .cursor { display: block; }
+      /* Als menu open is: toon juist de systeemcursor en verberg de custom */
+      body.menu-open, 
+      body.menu-open * { cursor: auto !important; }
+      body.menu-open .cursor { opacity: 0 !important; pointer-events: none !important; }
+      body:not(.menu-open) .cursor { opacity: 1; }
+    }
+    
+    /* Touch devices: geen custom cursor */
+    @media (pointer: coarse) {
+      .cursor { display: none; }
+    }
+  
+  /* Stijl van de custom cursor (cirkel) */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition:
+      transform 0.15s ease-out,
+      width 0.2s ease,
+      height 0.2s ease,
+      background 0.3s,
+      opacity 0.2s ease;
+    opacity: 0; /* JS zet naar 1 bij eerste mousemove */
+  }
+  
+  /* klein puntje in het midden */
+  .cursor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: var(--color-text);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  /* bij hover: ring krimpt, maar puntje blijft */
+  .cursor.hover {
+    width: 10px;
+    height: 10px;
+    border-color: var(--color-text);
+    background: var(--color-text);
+  }
+  
+  /* pseudo-element altijd zichtbaar, ook bij hover */
+  .cursor.hover::after {
+    width: 4px;
+    height: 4px;
+    background: var(--color-text);
+  }
+  
+  body.menu-open .cursor { opacity: 0 !important; pointer-events: none !important; }
+  body:not(.menu-open) .cursor { opacity: 1; }
 
-  /* text */
-  --color-text: #ffffff;
-  --color-text-dark: #000000;
-  --color-text-muted: #828282;
-
-  /* effects */
-  --shadow-glow: 0 0 20px rgba(127, 185, 255, 0.35);
-  --shadow-glow-soft: 0 0 10px rgba(127, 185, 255, 0.2);
-}
-
-/* Oranje variant – matchend met je banner */
-.theme-orange{
-  --color-primary: #ffb066;       /* primary */
-  --color-primary-hover: #ffd0a3; /* hover/soft */
-}
-
-/* ===== Base reset/style ===== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html,
-body {
-  height: 100%;
-  background: var(--color-bg);
-  color: var(--color-text);
-  font:
-    15px/1.6 'Poppins',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Arial,
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Button (set plain) */
-button {
-  background: none;
-  border: none;
-  outline: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-}
-
-/* Links */
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--color-primary-hover);
-}
-
-/* Typografie */
-h1,
-h2,
-h3 {
-  color: var(--color-text);
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.muted {
-  color: var(--color-text-muted);
-}
-
-.tag {
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.35);
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: .8rem;
-  color: #fff;
-}
-
-/* Containers */
-.container {
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: 24px;
-}
-
-/* Card */
-.card {
-  background: var(--color-primary);
-  border-radius: 30px;
-  padding: 20px;
-  transition:
-    box-shadow 0.25s ease,
-    transform 0.25s ease,
-    background 0.25s ease;
-}
-.card:hover {
-  transform: translate(-4px, -2px);
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  background: var(--color-primary);
-  color: var(--color-text);
-  border-radius: 8px;
-  padding: 0.7rem 1rem;
-  transition:
-    background 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.15s ease;
-}
-.btn:active {
-  transform: translateY(1px);
-}
-
-/* Inputs / textareas */
-input,
-textarea {
-  width: 100%;
-  background: var(--color-surface);
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  outline: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-input::placeholder,
-textarea::placeholder {
-  color: var(--color-text-muted);
-}
-input:focus,
-textarea:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(127, 185, 255, 0.2);
-}
-
-/* Utility */
-.section {
-  padding: 64px 0;
-}
-.divider {
-  height: 1px;
-  background: var(--color-border);
-  margin: 24px 0;
-}
+  /* =========================
+     Elementen
+     ========================= */
+  
+  /* Buttons (plain baseline) */
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    font: inherit;
+  }
+  
+  /* Links */
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+  
+  /* Typografie */
+  h1, h2, h3 {
+    color: var(--color-text);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .muted { color: var(--color-text-muted); }
+  
+  .tag {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: .8rem;
+    color: #fff;
+  }
+  
+  /* Containers */
+  .container {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  
+  /* Card */
+  .card {
+    border-radius: 30px;
+    padding: 20px;
+    transition:
+      transform 0.25s ease,
+  }
+  .card:hover { transform: translate(-4px, -2px); }
+  
+  /* Buttons (componentstijl) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    transition:
+      background 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  
+  /* Inputs / textareas */
+  input,
+  textarea {
+    width: 100%;
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  input::placeholder,
+  textarea::placeholder { color: var(--color-text-muted); }
+  
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(127, 185, 255, 0.2);
+  }
+  
+  /* Utilities */
+  .section { padding: 64px 0; }
+  
+  .divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 24px 0;
+  }

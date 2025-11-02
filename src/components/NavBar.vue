@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 
 // --- MENU TOGGLE ---
@@ -8,12 +8,10 @@ const toggleMenu = () => (menuOpen.value = !menuOpen.value)
 const closeMenu = () => (menuOpen.value = false)
 
 // --- CV-tekst dynamisch ---
-const cvText = ref('') // ✅ hier definieer je de variabele
+const cvText = ref('')
 
 const updateCvText = () => {
-    cvText.value = window.innerWidth > 768
-        ? 'Curriculum Vitae | CV'
-        : 'CV'
+    cvText.value = window.innerWidth > 768 ? 'Curriculum Vitae | CV' : 'CV'
 }
 
 // --- KEYDOWN ESCAPE ---
@@ -26,17 +24,26 @@ const router = useRouter()
 
 onMounted(() => {
     updateCvText()
-    window.addEventListener('resize', updateCvText) // ✅ luistert naar resize
+    window.addEventListener('resize', updateCvText)
     window.addEventListener('keydown', onKey)
 })
 
 onBeforeUnmount(() => {
     window.removeEventListener('resize', updateCvText)
     window.removeEventListener('keydown', onKey)
+    // zorg dat body state altijd schoon is bij unmount
+    document.body.classList.remove('menu-open')
+    document.body.style.overflow = ''
 })
 
-// --- Sluit menu na navigatie ---
+// Sluit menu na navigatie
 router.afterEach(() => closeMenu())
+
+// --- Keep body state (cursor verbergen + scroll lock) in sync met menuOpen
+watch(menuOpen, (open) => {
+    document.body.classList.toggle('menu-open', open) // <- nodig voor custom cursor
+    document.body.style.overflow = open ? 'hidden' : ''
+})
 </script>
 
 <template>
@@ -98,7 +105,6 @@ router.afterEach(() => closeMenu())
     align-items: center;
     justify-content: space-between;
     padding: 1.2rem 0.5rem;
-    /* verticale spacing */
 }
 
 /* Brand */
@@ -157,7 +163,6 @@ router.afterEach(() => closeMenu())
     overflow: hidden;
     background: transparent;
     border: 2px var(--color-primary) solid;
-
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     transition: color 0.4s ease;
@@ -167,7 +172,7 @@ router.afterEach(() => closeMenu())
     background: none;
 }
 
-/* De “vul-laag” */
+/* vul-laag */
 .btn--cv::before {
     content: '';
     position: absolute;
@@ -183,14 +188,13 @@ router.afterEach(() => closeMenu())
     transform: scaleX(1);
 }
 
-/* Tekst boven de pseudo-laag */
+/* tekst boven pseudo */
 .btn--cv span {
     position: relative;
     z-index: 100;
     transition: color 0.4s ease;
 }
 
-/* Tekstkleur verandert als de knop gevuld is */
 .btn--cv:hover span {
     color: var(--color-text);
 }
@@ -208,7 +212,6 @@ router.afterEach(() => closeMenu())
     border-radius: 8px;
     padding: 8px;
     min-width: 180px;
-
     z-index: 20;
 }
 
@@ -237,12 +240,11 @@ router.afterEach(() => closeMenu())
     border-radius: inherit;
 }
 
-/* Hover animatie */
 .menu-item:hover::before {
     transform: scaleX(1);
 }
 
-/* Tekst boven de pseudo-laag */
+/* tekst boven pseudo */
 .menu-item span,
 .menu-item {
     position: relative;
@@ -267,12 +269,12 @@ router.afterEach(() => closeMenu())
     color: var(--color-text);
 }
 
+/* Backdrop */
 .backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-
-    z-index: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
 }
 
 .fade-enter-active,
@@ -306,7 +308,5 @@ router.afterEach(() => closeMenu())
     .brand-name {
         display: none;
     }
-
-    /* alleen avatar tonen, optioneel */
 }
 </style>
