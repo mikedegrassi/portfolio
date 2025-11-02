@@ -174,15 +174,6 @@ onBeforeUnmount(() => {
     gap: 6px;
 }
 
-.tag {
-    background: rgba(0, 0, 0, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    padding: 4px 8px;
-    border-radius: 999px;
-    font-size: .8rem;
-    color: #fff;
-}
-
 /* Body */
 .body {
     position: relative;

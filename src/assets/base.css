@@ -73,8 +73,18 @@ h3 {
   font-weight: 600;
   line-height: 1.2;
 }
+
 .muted {
   color: var(--color-text-muted);
+}
+
+.tag {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: .8rem;
+  color: #fff;
 }
 
 /* Containers */
