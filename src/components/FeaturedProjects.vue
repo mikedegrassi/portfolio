@@ -63,8 +63,6 @@ const setActive = (i) => (active.value = i)
 .card {
     display: flex;
     flex-direction: column;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 0;
     overflow: hidden;
