@@ -27,6 +27,15 @@ const router = createRouter({
       component: ContactView
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // Als de gebruiker op de terug-knop klikt:
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      // Altijd terug naar boven scrollen
+      return { top: 0 }
+    }
+  }
 })
 
 export default router

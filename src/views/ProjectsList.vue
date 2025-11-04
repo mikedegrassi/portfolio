@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
                     combineer.
                 </p>
 
-                <div class="hero-actions">
+                <div class="btn-div">
                     <a href="#projects-grid" class="btn btn--outline">
                         <span>Lees verder</span>
                     </a>
@@ -74,8 +74,12 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.btn {
-    margin: 0 20px;
+.btn-div a:first-child {
+    margin-right: 20px;
+}
+
+.btn-div {
+    display: flex;
 }
 
 .btn--outline:hover {

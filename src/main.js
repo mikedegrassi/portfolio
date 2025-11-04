@@ -8,7 +8,7 @@ import './assets/main.css'
 const cursorEl = document.querySelector('.cursor');
 if (cursorEl) {
     let x = 0, y = 0, tx = 0, ty = 0;
-    const ease = 0.90; // hoe “traag” de trailing is (lager = trager)
+    const ease = 1; // hoe “traag” de trailing is (lager = trager)
 
     // fade-in bij eerste move
     let revealed = false;

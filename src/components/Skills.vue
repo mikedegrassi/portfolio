@@ -90,7 +90,7 @@ const paddedLanguages = computed(() => {
                             <div class="grid">
                                 <div v-for="(l, i) in paddedLanguages" :key="l?.name ?? `empty-${i}`" class="skill"
                                     :class="{ 'skill--empty': !l }">
-                                    <div class="iconbox flagbox">
+                                    <div :class="['iconbox', { flagbox: l?.icon }]">
                                         <img v-if="l?.icon" :src="getFlagSrc(l.icon)"
                                             :alt="(l?.name || 'Leeg') + ' vlag'" />
                                     </div>

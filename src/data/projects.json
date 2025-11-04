@@ -1,56 +1,547 @@
 [
   {
     "id": 1,
-    "slug": "ticketing-platform",
-    "title": "Ticketing Platform",
-    "description": "Een onafhankelijk ticketsysteem met clean UI, snelle search en QR entry.",
-    "image": "ticket.png",
+    "slug": "robot-wars",
+    "title": "Robot Wars",
+    "description": "Als aftrap van jaar 1 moesten we strijd in een Robot Wars tournooi",
+    "image": "robot-wars.png",
     "url": "https://example.com/ticketing",
     "highlight": true,
-
-    "problem": "Losstaande evenement-registraties, trage zoekfunctie en onduidelijke toegang.",
-    "assignment": "Ontwerp en bouw een onafhankelijk ticketsysteem met snelle zoek- en entreeflow.",
-    "role": "Full-stack: UX/UI, front-end (Vue), back-end prototyping, QA.",
-    "result": "MVP met 40% snellere entreeflow en duidelijke QR-scan validatie.",
-
-    "tech": ["Vue", "Vite", "Supabase", "Tailwind"],
-    "tags": ["SaaS", "Events"],
-    "date": "2025-06-01"
+    "assignment": "De opdracht was simpel, maak een robot die elke andere robot verslaat dit je medestudenten maken",
+    "role": "In dit oproject was ik volledig aan het stuur. Het design en het programmeren van de robot lag volledig in mijn handen.",
+    "result": "Mijn robot domineerde in elke ronde en werd de kampioen van het tournooi.",
+    "tech": [
+      "Ada Fruit",
+      "Ada Circuit"
+    ],
+    "tags": [
+      "Events",
+      "IoT"
+    ],
+    "date": "Jaar 1"
   },
   {
     "id": 2,
-    "slug": "ai-chat-assistant",
-    "title": "AI Chat Assistant",
-    "description": "Experimentele assistant met conversatie en context, gebouwd in Vue.",
-    "image": "chat.png",
-    "url": "https://example.com/ai",
+    "slug": "reserveringssysteem-van-scratch",
+    "title": "Reserveringssysteem van Scratch",
+    "description": "Een zware opdracht voor eerstejaars, het maken van een reserveringsysteem in vanilla PHP",
+    "image": "reserveringssysteem-van-scratch.png",
+    "url": "https://github.com/mikedegrassi/CLE2.",
     "highlight": true,
-
-    "problem": "Gebruikers raken context kwijt tijdens langere chats.",
-    "assignment": "Bouw een UI met contextvensters en snelle toolswitching.",
-    "role": "Product thinking, prototyping, front-end.",
-    "result": "Hogere task-completion; duidelijke states voor context en tool acties.",
-
-    "tech": ["Vue", "Pinia"],
-    "tags": ["AI", "Prototype"],
-    "date": "2025-05-10"
+    "assignment": "Maak een reserveringssysteem voor een bekende in de buurt of confronteer een bestaand bedrijf.",
+    "role": "Ik heb mij gefocust op het maken van een back-end die zich onderscheid van mijn medestudenten door 3 verschillende pagina's te maken in plaats van 1. De front-end heb ik oko zelf gemaakt mar heb ik minder op gefocust.",
+    "result": "Zoals ik voor ogen had, heb ik een werkend reserveringssysteem ontwikkeld in vanilla PHP dat zich onderscheidt van dat van mijn medestudenten.",
+    "tech": [
+      "MySQL",
+      "PHP"
+    ],
+    "tags": [
+      "Backend",
+      "Database",
+      "Reserveringssysteem"
+    ],
+    "date": "Jaar 1"
   },
   {
     "id": 3,
-    "slug": "portfolio-redesign",
-    "title": "Portfolio Redesign",
-    "description": "Minimal, snel en met focus op typografie en micro-interacties.",
+    "slug": "serious-game",
+    "title": "Serious Game voor taalontwikkeling",
+    "description": "Om kinderen te helpen die moeite hebben met het beheersen van taal hebben mijn groep en ik een serious game gemaakt.",
     "image": "portfolio.png",
-    "url": "https://example.com/portfolio",
+    "url": "https://github.com/issamfissoune/CLE4-Game",
     "highlight": true,
-
-    "problem": "Vorige portfolio had inconsistent grid en slechte performance.",
-    "assignment": "Herontwerp met consistente grid, betere a11y en animaties.",
-    "role": "Ontwerp + implementatie.",
-    "result": "Betere leesbaarheid, 90+ Lighthouse scores.",
-    
-    "tech": ["Vue", "Vite", "CSS"],
-    "tags": ["Design", "Frontend"],
-    "date": "2025-04-01"
+    "assignment": "Ons doel was om kinderen te helpen die moeite hadden met taalbeheersing. De opdracht vanuit school was echter om dit te realiseren in de vorm van een game.",
+    "role": "Ik heb de back-end ontwikkeld en een onepager gemaakt. Daarnaast heb ik verschillende gimmick-prototypes gebouwd om de game levendiger te maken, zoals audio, bewegende spritesheets en soepele schermovergangen.",
+    "result": "We hebben een interactieve game ontwikkeld waarin de speler zijn tegenstander kan verslaan door vragen juist te beantwoorden. De tegenstanders zijn wormen die de wereld proberen over te nemen. Om het spel aantrekkelijker te maken voor kinderen, hebben we besloten bekende personages zoals Finn uit Adventure Time toe te voegen.",
+    "tech": [
+      "Pixi.js",
+      "Typescript"
+    ],
+    "tags": [
+      "Gaming",
+      "Education"
+    ],
+    "date": "Jaar 1"
+  },
+  {
+    "id": 4,
+    "slug": "crud-systeem-vanilla-php",
+    "title": "CRUD Systeem in Vanilla PHP",
+    "description": "Een zelfgebouwd CRUD-systeem waarmee gebruikers kunnen inloggen, afspraken plannen en verwijderen.",
+    "image": "crud.png",
+    "url": "https://github.com/mikedegrassi/Building-Block-Back-End/tree/main/CLE2",
+    "highlight": true,
+    "assignment": "De opdracht was om een functioneel back-end systeem te ontwikkelen met create-, read-, update- en delete-functionaliteit",
+    "role": "Ik heb het systeem volledig zelf opgebouwd, inclusief de databasekoppeling, loginfunctie en het plannen en verwijderen van afspraken. Daarnaast heb ik basis-CSS gebruikt voor een overzichtelijke interface.",
+    "result": "Het resultaat is een stabiel en gebruiksvriendelijk reserveringssysteem met werkende inlogfunctie, dataweergave en CRUD-operaties — volledig gebouwd in vanilla PHP.",
+    "tech": [
+      "PHP",
+      "MySQL",
+      "CSS"
+    ],
+    "tags": [
+      "Backend",
+      "CRUD",
+      "Vanilla PHP"
+    ],
+    "date": "Jaar 1"
+  },
+  {
+    "id": 5,
+    "slug": "breakout-game-cle3",
+    "title": "Breakout Game – Buiten Spelen Stimuleren",
+    "description": "Een interactieve coöperatieve game ontworpen om kinderen te stimuleren meer samen buiten te spelen.",
+    "image": "breakout.png",
+    "url": "https://mikedegrassi.github.io/CLE3-OnePager-Mike/",
+    "highlight": true,
+    "assignment": "Bij deze opdracht was het de bedoeling om een concept te ontwikkelen dat kinderen aanzet om vaker en samen buiten te spelen. Ons idee was een groot scherm op het Dakpark in Rotterdam waarop het spel Breakout gespeeld kon worden.",
+    "role": "Ik was verantwoordelijk voor zowel de front-end als de back-end van de Breakout-game en heb daarnaast de onepager ontworpen en gebouwd waarin het concept wordt uitgelegd.",
+    "result": "We hebben een interactieve versie van Breakout ontwikkeld waarin twee spelers samen moeten werken om het spel te kunnen spelen. Eén speler bestuurt de linker paddle, de andere de rechter — samenwerken is dus essentieel. De onepager met uitleg is live te bekijken via: https://mikedegrassi.github.io/CLE3-OnePager-Mike/",
+    "tech": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "tags": [
+      "Gaming",
+      "Teamwork",
+      "Gemeenschap"
+    ],
+    "date": "Jaar 1"
+  },
+  {
+    "id": 6,
+    "slug": "ajax-magazine",
+    "title": "Ajax Magazine",
+    "description": "Een interactieve magazinepagina met Ajax-spelers waarin je jouw favorieten kunt opslaan via localStorage.",
+    "image": "ajax.png",
+    "url": "https://github.com/mikedegrassi/Magazine",
+    "highlight": false,
+    "assignment": "De opdracht was om een dynamische webapplicatie te maken met interactieve elementen en dataopslag in de browser.",
+    "role": "Ik heb het magazine volledig zelf ontworpen en gebouwd met HTML, CSS, JavaScript en PHP. De focus lag op de interactiviteit en het opslaan.",
+    "result": "Het resultaat is een webapplicatie waarin bezoekers Ajax-spelers kunnen bekijken en favorieten opslaan. Deze favorieten blijven bewaard, zelfs na het verversen van de pagina.",
+    "tech": [
+      "PHP",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "Interactie",
+      "LocalStorage"
+    ],
+    "date": "Jaar 1"
+  },
+  {
+    "id": 7,
+    "slug": "react-node-prg06",
+    "title": "React & Node.js App",
+    "description": "Een fullstack applicatie ontwikkeld met een Node.js/Express backend en een React-frontend.",
+    "image": "prg06.png",
+    "url": "https://github.com/mikedegrassi/Prg06-frontend",
+    "highlight": true,
+    "assignment": "De opdracht was om een moderne fullstack webapplicatie te bouwen met een REST API, waarbij de front-end en back-end afzonderlijk moesten functioneren.",
+    "role": "Ik heb de back-end gebouwd met Node.js, Express en MongoDB, inclusief CRUD-functionaliteit en API-routes. Voor de front-end heb ik React gebruikt om dynamisch data weer te geven vanuit de API.",
+    "result": "Een fullstack applicatie met communicatie tussen de client en server via REST API’s. De data wordt opgeslagen in MongoDB en real-time gesynchroniseerd met de React-frontend.",
+    "tech": [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "React"
+    ],
+    "tags": [
+      "Fullstack",
+      "API",
+      "CRUD"
+    ],
+    "date": "Jaar 2"
+  },
+  {
+    "id": 8,
+    "slug": "laravel-magazine",
+    "title": "Magazine in Laravel",
+    "description": "Mijn eerste MVC-project in Laravel: een auto-magazine met inloggen, CRUD, tags en zoeken.",
+    "image": "laravel-magazine.png",
+    "url": "https://github.com/mikedegrassi/Laravel-PRG05",
+    "highlight": true,
+    "assignment": "Bouw een magazine-achtige webapp met database, auth en dynamische content in een MVC-framework.",
+    "role": "Ik heb zowel de back-end als de front-end gebouwd. Met Laravel (Eloquent) heb ik CRUD voor auto’s opgezet, image uploads, tags, zoeken, paginatie en rolgebaseerde toegang (admin/auth). Voor de UI heb ik Bootstrap gebruikt.",
+    "result": "Een functioneel magazine over auto’s met inloggen, beheren, taggen en zoeken. Status en acties worden in de database opgeslagen (géén localStorage).",
+    "tech": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Bootstrap"
+    ],
+    "tags": [
+      "MVC",
+      "CRUD",
+      "Auth",
+      "Eloquent"
+    ],
+    "date": "Jaar 2"
+  },
+  {
+    "id": 9,
+    "slug": "accessibility-tool",
+    "title": "Accessibility Tool voor MKB-ondernemers",
+    "description": "Een webapplicatie waarmee ontwikkelaars en MKB’ers hun websites kunnen scannen op toegankelijkheid en verbeterpunten krijgen voor visuele toegankelijkheid.",
+    "image": "accessibility-tool.png",
+    "url": "",
+    "highlight": true,
+    "assignment": "Ontwikkel een tool die programmeurs helpt om hun websites toegankelijker te maken. De focus lag op visuele toegankelijkheid voor slechtzienden en ouderen.",
+    "role": "Ik was verantwoordelijk voor de front-end van de applicatie en heb gezorgd voor een duidelijke interface die ook bij slechtziende gebruikers goed te gebruiken is. Daarnaast heb ik gewerkt aan de structuur en styling van de tool, zodat deze aansluit bij de eisen van accessibility.nl.",
+    "result": "We hebben een werkende webapplicatie ontwikkeld waarmee gebruikers hun project kunnen scannen en feedback krijgen over visuele toegankelijkheid. De applicatie bevat een overzicht van projecten en had in de toekomst uitgebreid kunnen worden met een checklist en verbeterde navigatie. Het prototype is overgedragen aan accessibility.nl.",
+    "tech": [
+      "Python",
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "tags": [
+      "Accessibility",
+      "Frontend",
+      "Design"
+    ],
+    "date": "Jaar 2"
+  },
+  {
+    "id": 10,
+    "slug": "ballieu-prototype",
+    "title": "Ballieu – Buiten Spelen via Gamification",
+    "description": "Een app-prototype geïnspireerd door Pokémon GO, gericht op het stimuleren van buitenspelen door middel van voetbal en teamcompetitie.",
+    "image": "ballieu.png",
+    "url": "https://github.com/mikedegrassi/tle2-backend",
+    "highlight": true,
+    "assignment": "Ontwikkel een concept dat kinderen stimuleert om vaker en samen buiten te spelen. Ons idee was een mobiele app waarin spelers voetbalveldjes in de echte wereld kunnen veroveren namens hun team (rood, blauw of groen).",
+    "role": "Ik aan de back-end van de applicatie gewerkt in Node.js met Sequelize. Daarnaast heb ik gezorgd voor de API-structuur waarmee de front-end (gemaakt door een teamgenoot) communiceert.",
+    "result": "We hebben een functioneel prototype opgeleverd dat de basis legt voor een interactieve multiplayer-ervaring. Gebruikers konden teams vormen en virtuele veldjes veroveren. Het project was ambitieus en technisch complex, maar vormde een waardevolle leerervaring voor ons team.",
+    "tech": [
+      "Node.js",
+      "Express",
+      "Sequelize",
+      "MySQL"
+    ],
+    "tags": [
+      "Backend",
+      "Gamification",
+      "Teamwork"
+    ],
+    "date": "Jaar 2"
+  },
+  {
+    "id": 11,
+    "slug": "ml5-breakout",
+    "title": "Breakout Game met Machine Learning",
+    "description": "Een interactieve versie van Breakout waarin je de paddle bestuurt met handgebaren via een camera, gebouwd met ML5.js en JavaScript.",
+    "image": "ml5-breakout.png",
+    "url": "https://mikedegrassi.github.io/ML5-Breakout/",
+    "highlight": true,
+    "assignment": "De opdracht was om een interactieve toepassing te ontwikkelen met behulp van AI. Dit kon variëren van beeldherkenning tot regressie of classificatie.",
+    "role": "Ik heb de volledige game ontwikkeld in JavaScript en ML5.js. De game gebruikt een webcam om handbewegingen te detecteren, waarmee de speler de paddle kan besturen in plaats van met toetsenbord of muis.",
+    "result": "Het resultaat is een werkende game waarin spelers met hun hand de paddle kunnen bewegen. Hierdoor ontstaat een speelse kennismaking met AI-gestuurde interactie. Het project laat zien hoe je machine learning op een laagdrempelige en creatieve manier kunt toepassen in web-games.",
+    "tech": [
+      "ML5.js",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "tags": [
+      "Machine Learning",
+      "Gaming",
+      "AI"
+    ],
+    "date": "Jaar 2"
+  },
+  {
+    "id": 12,
+    "slug": "meeloopstage-emissie-gamification",
+    "title": "Meeloopstage – Gamification van Emissie",
+    "description": "Tijdens mijn meeloopstage werkte ik aan een project gericht op de gamification van CO₂-emissies tussen bedrijven.",
+    "image": "stage.png",
+    "url": "https://github.com/mikedegrassi/BlazingPizza",
+    "highlight": true,
+    "assignment": "Het doel van mijn stage was om bedrijven op een speelse manier bewust te maken van hun CO₂-uitstoot. Hierbij moest rekening worden gehouden met privacy, voertuiggebruik en databeveiliging. Daarnaast wilde ik mijn kennis in back-end development uitbreiden.",
+    "role": "Ik heb een uitgebreid Figma-prototype ontworpen en dit vervolgens vertaald naar een werkende applicatie. Daarnaast heb ik de Blazing Pizza-tutorial gevolgd om mezelf de basis van C# en .NET eigen te maken. Tijdens deze stage groeide ik uit van stagiair naar volwaardig medewerker binnen het bedrijf.",
+    "result": "Het resultaat was een werkend prototype van een gamified emissieplatform. Door middel van C#-oefening en praktijkervaring heb ik niet alleen mijn technische vaardigheden versterkt, maar ook geleerd hoe je complexe concepten vertaalt naar gebruiksvriendelijke oplossingen. Vanwege geheimhouding kan het eindproduct niet publiek gedeeld worden.",
+    "tech": [
+      "C#",
+      ".NET",
+      "Figma",
+      "Gamification"
+    ],
+    "tags": [
+      "Stage",
+      "Gamification",
+      "C#",
+      "UX Design"
+    ],
+    "date": "Jaar 3"
+  },
+  {
+    "id": 13,
+    "slug": "valpreventie-memory-mingle",
+    "title": "Memory Mingle – Valpreventie App",
+    "description": "Een sociaal en functioneel concept gericht op valpreventie bij ouderen, waarbij samen bewegen centraal staat.",
+    "image": "memorymingle.png",
+    "url": "https://mikedegrassi.github.io/ML2-Onepager/",
+    "highlight": true,
+    "assignment": "Het doel van dit project was om een product te ontwerpen dat ouderen helpt om hun evenwicht te trainen. Na onderzoek en testen met de doelgroep ontdekten we dat de echte doelgroep niet de ouderen met dementie zelf zijn, maar de mensen in hun directe omgeving.",
+    "role": "Ik was verantwoordelijk voor het ontwerpen en bouwen van de onepager, het uitvoeren van doelgroepinterviews en het realiseren van bijna alle schermen van de app. De onepager is live te bekijken via [Memory Mingle Onepager](https://mikedegrassi.github.io/ML2-Onepager/). Het Figma-ontwerp is hier te vinden: [Figma Board](https://www.figma.com/board/zuv5EITX7Y9dpCCzOj5rEH/DC-8-).",
+    "result": "Het eindresultaat is een app waarmee naasten van ouderen samen met hen evenwichtsoefeningen kunnen doen. Zo helpt de app niet alleen bij valpreventie, maar verlaagt hij ook de drempel om ouderen met dementie te bezoeken. In toekomstige iteraties zou er functionaliteit voor voortgang en motivatie toegevoegd worden.",
+    "tech": [
+      "Figma",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "tags": [
+      "UX Design",
+      "Frontend",
+      "Health",
+      "Social Impact"
+    ],
+    "date": "Jaar 3"
+  },
+  {
+    "id": 14,
+    "slug": "nos-comic-stories-extension",
+    "title": "NOS Comic Stories – Chrome Extensie",
+    "description": "Een Chrome-extensie die NOS-artikelen omzet in korte visuele verhalen, ontwikkeld om jongeren beter te bereiken met nieuws.",
+    "image": "comicstories.png",
+    "url": "https://github.com/mikedegrassi/ML1-extension",
+    "highlight": true,
+    "assignment": "De NOS had als opdrachtgever het probleem dat hun nieuwsartikelen voor jongeren vaak te lang en te complex zijn. Jongeren consumeren vooral short-form content, waardoor nieuws snel aan hen voorbijgaat. Ons doel was om een concept te bedenken dat nieuws kort, visueel en aantrekkelijk maakt.",
+    "role": "Ik heb de Chrome-extensie ontwikkeld die tekst uit NOS-artikelen omzet in afbeeldingen met behulp van de DALL·E API. De gegenereerde beelden worden opgeslagen in Firebase en geladen in de app, waar ze het nieuwsverhaal in 4 à 5 beelden vertellen. De extensie werkt CMS-onafhankelijk, zodat deze overal toepasbaar is. Ook heb ik meegewerkt aan de app waarin de content gepersonaliseerd en via een ‘roll the dice’-functie random kon worden ontdekt. Het Figma-ontwerp is hier te bekijken: [Figma Design](https://www.figma.com/design/APsJTsSLXqI4ESuOQdUhrq/Comic-Stories?m=auto&t=OqmN3iBVrmQMiNMT-6).",
+    "result": "Het eindresultaat was een volledig werkende app en extensie die nieuwsartikelen automatisch omzet in korte visuele verhalen. De combinatie van AI, personalisatie en toegankelijk design maakt het een innovatieve oplossing om jongeren betrokken te houden bij het nieuws.",
+    "tech": [
+      "Node.js",
+      "Firebase",
+      "Express",
+      "DALL·E API",
+      "Chrome Extension"
+    ],
+    "tags": [
+      "AI",
+      "Youth Media",
+      "Innovation"
+    ],
+    "date": "Jaar 3"
+  },
+  {
+    "id": 15,
+    "slug": "1NIGHT-platform",
+    "title": "1NIGHT – Verhuurplatform voor Streamingaccounts",
+    "description": "Een eigen ondernemingsconcept waarin gebruikers hun streamingaccounts kunnen verhuren aan anderen om kosten te delen en toegang te krijgen tot meer content.",
+    "image": "1night.png",
+    "url": "https://www.figma.com/design/XFOfalRhs25Vb4bxOpQscU/Untitled?m=auto&t=wEqJ13wT5F9LLLLA-6",
+    "highlight": true,
+    "assignment": "Tijdens het vak PLE was de opdracht om een eigen onderneming te bedenken, uit te werken in Figma en uiteindelijk te programmeren. Het doel was om een creatief, uitvoerbaar en visueel sterk concept te realiseren.",
+    "role": "Ik heb het concept ‘1NIGHT’ bedacht: een platform waar gebruikers hun Netflix-, Disney+-, of Apple TV-accounts tijdelijk kunnen verhuren aan anderen. Zo benut je de abonnementen beter en bespaar je geld. Ik heb het volledige ontwerp in Figma gemaakt, inclusief de flow voor gebruikers die een account willen huren of aanbieden.",
+    "result": "Het resultaat is een modern en gebruiksvriendelijk conceptplatform dat inspeelt op het groeiende aantal streamingdiensten. Het combineert gebruiksgemak met een slimme manier om abonnementskosten te delen. De prototype-versie is volledig ontworpen in Figma.",
+    "tech": [
+      "Figma",
+      "UX Design"
+    ],
+    "tags": [
+      "Concept",
+      "Business",
+      "Innovation"
+    ],
+    "date": "Jaar 3"
+  },
+  {
+    "id": 16,
+    "slug": "cities-of-things-robot-generator",
+    "title": "Cities of Things – Wijkrobot Generator",
+    "description": "Een inspirerend app-prototype waarmee deelnemers tijdens de Cities of Things-workshop hun eigen wijkrobot kunnen samenstellen uit bestaande componenten.",
+    "image": "robotgenerator.png",
+    "url": "https://www.figma.com/design/WdfOvaTfe4EqOh756ZJZud/Cities-of-Things?node-id=587-1663&p=f&t=SyYSECsIG3qLp6QX-0",
+    "highlight": true,
+    "assignment": "De opdrachtgever, Cities of Things, organiseert workshops waarin mensen hun eigen wijkrobot kunnen bouwen. Onze opdracht was om een digitaal hulpmiddel te ontwerpen dat deelnemers inspireert om originele combinaties te maken.",
+    "role": "Ik heb gewerkt aan het interactieve prototype in Figma en Spline. Mijn taak was om het prototype levendiger te maken door alle animaties die erin verwerkt zijn. Het concept richtte zich op het genereren van een robot op basis van onderdelen van andere workshopdeelnemers. Zo ontstond een speels en inspirerend proces dat creativiteit stimuleert. Het eindresultaat is volledig te bekijken in Figma.",
+    "result": "We hebben een visueel aantrekkelijk en gebruiksvriendelijk prototype ontworpen waarmee gebruikers unieke robots kunnen genereren. Het project laat zien hoe design en technologie elkaar versterken om creativiteit in co-creatieprocessen te bevorderen.",
+    "tech": [
+      "Figma",
+      "Spline",
+      "Animatie"
+    ],
+    "tags": [
+      "UX Design",
+      "Prototype",
+      "Inspiration",
+      "3D Design"
+    ],
+    "date": "Jaar 4"
+  },
+  {
+    "id": 17,
+    "slug": "becoming-digital-designer-unreal",
+    "title": "Becoming a Digital Designer – Unreal Engine 5",
+    "description": "Een onepager waarin de ontwikkeling van Unreal Engine 5 wordt uitgelegd met focus op vernieuwing, design en gebruiksgemak.",
+    "image": "unreal.png",
+    "url": "https://github.com/mikedegrassi/bdd-onepager",
+    "highlight": true,
+    "assignment": "Tijdens de minor kregen we de opdracht om onderzoek te doen naar een actuele technologie en dit visueel te presenteren in een eigen onepager. Mijn teamgenoot en ik kozen voor Unreal Engine 5 omdat we beide gaming leuk vinden.",
+    "role": "Ik heb de website ontworpen en gebouwd waarin ik uitleg geef over de geschiedenis, nieuwe functies (zoals Blueprints en MetaHumans) en waarom Unreal Engine 5 zo populair is. De focus lag op front-end design, structuur en visuele storytelling.",
+    "result": "Het eindresultaat is een overzichtelijke en moderne onepager die complexe technologische informatie toegankelijk maakt via design en UX. De live versie is te bekijken via: https://mikedegrassi.github.io/bdd-onepager/. Later hebben mijn teamgenoot en ik een gastles gegeven aan tweedejaarsstudenten over het werken met Unreal Engine 5.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "tags": [
+      "Frontend",
+      "Design",
+      "Unreal Engine 5"
+    ],
+    "date": "Jaar 4"
+  },
+  {
+    "id": 18,
+    "slug": "ticketsysteem-invitado",
+    "title": "Ticketsysteem – Afstudeerstage bij Invitado",
+    "description": "Tijdens mijn afstudeerstage bij Invitado heb ik een prototype ontwikkeld voor een nieuw ticketsysteem met focus op privacy, snelheid en gebruikservaring.",
+    "image": "ticket.png",
+    "url": "https://github.com/mikedegrassi/ticket-system",
+    "highlight": true,
+    "assignment": "Onderzoek en ontwikkel een vernieuwd ticketsysteem dat beter aansluit op de wensen van Invitado en eindgebruikers, met aandacht voor privacy, snelle appflow en een verbeterde wachtrijstructuur.",
+    "role": "Ik heb het systeem ontworpen en gebouwd in React met Supabase als back-end. Daarnaast heb ik tests geschreven, CSS-variabelen en globals opgezet, en een modulaire componentstructuur uitgewerkt waarin elke component zijn eigen styling heeft. Ook heb ik uitgebreid gewerkt met user stories en gebruikerstesten uitgevoerd om de flow en ervaring continu te verbeteren.",
+    "result": "Het resultaat is een werkend prototype waarin gebruikers zich kunnen inschrijven voor concerten, hun tickets kunnen bekijken en evenementen kunnen ontdekken. Het project vormt een sterke en toekomstbestendige technische basis waarop Invitado verder kan bouwen. De bijbehorende Figma-omgeving toont de uitgewerkte interacties en ontwerpbeslissingen: https://www.figma.com/design/pFfUdt5uXcMIrQYKYPB8K2/Untitled?node-id=53-202&p=f&t=fFZMy51KeVSYNPTt-0",
+    "tech": [
+      "React",
+      "Supabase",
+      "JavaScript",
+      "CSS"
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "UX",
+      "Privacy",
+      "User Testing"
+    ],
+    "date": "Jaar 4"
+  },
+  {
+    "id": 19,
+    "slug": "reserveringssysteem-kapper-wordpress",
+    "title": "Reserveringssysteem voor kapper – Freshwierie.nl",
+    "description": "Een volledig geautomatiseerd reserveringssysteem gebouwd in WordPress met Bookly, inclusief agenda-synchronisatie en iDEAL-betalingen.",
+    "image": "freshwierie.png",
+    "url": "https://freshwierie.nl",
+    "highlight": true,
+    "assignment": "Ontwikkel een gebruiksvriendelijke website voor een lokale kapper waarin klanten eenvoudig afspraken kunnen plannen, gekoppeld aan een live agenda en betalingsverwerking via iDEAL.",
+    "role": "Ik heb de volledige website ontworpen en ingericht in WordPress. Het reserveringssysteem is gerealiseerd met het Bookly-pakket, dat automatisch synchroniseert met de agenda van de kapper. Daarnaast heb ik een dynamische banner-video gemaakt met behulp van Sora AI om de homepage visueel sterker te maken.",
+    "result": "Het eindresultaat is een volledig functioneel reserveringssysteem waarin klanten eenvoudig afspraken kunnen maken, betalen en bevestigingen ontvangen. De site — ontwikkeld voor een lokale ondernemer om tijd te besparen op boekingen — stond live op freshwierie.nl maar is momenteel offline door een tijdelijke betalingsachterstand.",
+    "tech": [
+      "WordPress",
+      "Bookly",
+      "Sora AI"
+    ],
+    "tags": [
+      "WordPress",
+      "iDEAL",
+      "Synchronisatie",
+      "AI"
+    ],
+    "date": "Eigen Project"
+  },
+  {
+    "id": 20,
+    "slug": "hetjetloket-website",
+    "title": "Website voor freelance docent – HetJetLoket",
+    "description": "Mijn eerste echte freelanceproject: een promotiewebsite voor een docent, gebouwd in HTML en CSS.",
+    "image": "hetjetloket.png",
+    "url": "https://mikedegrassi.github.io/HetJetLoket/hetjetloket/",
+    "highlight": false,
+    "assignment": "Ontwikkel een persoonlijke website voor een freelance docent die zichzelf en haar diensten wil promoten.",
+    "role": "Ik heb de volledige website gebouwd in HTML en CSS. Ondanks dat ik nog niet veel ervaring had met programmeren, heb ik het project zelfstandig opgepakt en afgeleverd. De opdrachtgever was erg tevreden met het resultaat.",
+    "result": "De website biedt een overzicht van haar werk en diensten en vormde mijn eerste officiële freelanceproject buiten school. Een simpel maar belangrijk project waarmee ik mijn eerste stappen zette in webdevelopment. Als ik nu kijk vind ik het niet mooi maar ik programmeerde toen net 2 maanden.",
+    "tech": [
+      "HTML",
+      "CSS"
+    ],
+    "tags": [
+      "Freelance",
+      "Portfolio",
+      "HTML",
+      "CSS"
+    ],
+    "date": "Eigen Project"
+  },
+  {
+    "id": 21,
+    "slug": "andre-personal-trainer-website",
+    "title": "Website voor Personal Trainer & Masseur – André",
+    "description": "Een creatieve tweepagina-website voor een personal trainer en masseur, ontworpen binnen een beperkt budget en met aandacht voor toegankelijkheid.",
+    "image": "andre.png",
+    "url": "https://github.com/mikedegrassi/andre",
+    "highlight": true,
+    "assignment": "Ontwerp en ontwikkel een compacte maar effectieve website voor een personal trainer die ook massages aanbiedt, met een beperkt budget en een focus op eenvoud, snelheid en gebruiksvriendelijkheid.",
+    "role": "Ik heb de volledige website ontworpen en gebouwd. Op de homepage kiest de bezoeker tussen ‘Personal Training’ of ‘Massage’, waarna dynamisch de juiste content wordt ingeladen binnen dezelfde structuur. Zo bleef het project betaalbaar zonder aan kwaliteit in te leveren. De website moest bovendien snel worden opgeleverd onder tijdsdruk, en ik heb rekening gehouden met de leesbaarheid en toegankelijkheid voor een wat ouder publiek.",
+    "result": "Het resultaat is een snelle en overzichtelijke website met een unieke, interactieve homepage. De klant was erg tevreden met het eindresultaat en de balans tussen functionaliteit en kosten. De live versie is te bekijken op: https://mikedegrassi.github.io/andre/",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "tags": [
+      "Freelance",
+      "Dynamic Content",
+      "Toegankelijkheid",
+      "Budget Project"
+    ],
+    "date": "Eigen Project"
+  },
+  {
+    "id": 22,
+    "slug": "cvbeautybrasil-website",
+    "title": "Website-aanpassingen voor CV Beauty Brasil",
+    "description": "Een noodproject waarbij ik een bestaande beautywebsite heb hersteld en uitgebreid met nieuwe pagina’s in een Pinterest-achtige stijl.",
+    "image": "cvbeautybrasil.png",
+    "url": "https://cvbeautybrasil.com/",
+    "highlight": false,
+    "assignment": "Een oud-klasgenoot nam contact op omdat haar website niet meer goed functioneerde. Ze vroeg mij om de prijs- en contactpagina te maken en de website een frisse, Pinterest-achtige uitstraling te geven. Ook moest k de animatie en de homepagina werken maken.",
+    "role": "Ik heb binnen korte tijd de website hersteld, nieuwe pagina’s ontworpen en gestyled, en de problemen opgelost binnen het afgesproken budget. Hierbij lag de focus op een visueel aantrekkelijke presentatie en duidelijke structuur.",
+    "result": "De website werkte weer volledig en kreeg een modernere look. De klant was opgelucht en tevreden dat alles snel en professioneel was opgelost.",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "tags": [
+      "Freelance",
+      "Frontend",
+      "Troubleshooting",
+      "Redesign"
+    ],
+    "date": "Eigen Project"
+  },
+  {
+    "id": 23,
+    "slug": "portfolio-vue",
+    "title": "Persoonlijk Portfolio in Vue.js",
+    "description": "Mijn persoonlijke portfolio-website, gebouwd met Vue.js om mijn werk te presenteren en een nieuw framework te leren.",
+    "image": "portfolio-vue.png",
+    "url": "https://github.com/mikedegrassi/portfolio",
+    "highlight": true,
+    "assignment": "Ik wilde een portfolio bouwen voordat ik ging solliciteren, en tegelijkertijd mijn kennis uitbreiden door te werken met een nieuw framework dat veel wordt gevraagd in het werkveld: Vue.js.",
+    "role": "Ik heb het volledige ontwerp, de structuur en de code van de website zelf gerealiseerd. Hierbij heb ik gebruikgemaakt van component-based development, dynamische data via JSON, en aandacht besteed aan performance, micro-animaties en consistente typografie.",
+    "result": "Het resultaat is de website die je nu bekijkt — een snel, modern en overzichtelijk portfolio waarmee ik mijn projecten, skills en ervaring op een professionele manier presenteer.",
+    "tech": [
+      "Vue.js",
+      "Vite",
+      "CSS"
+    ],
+    "tags": [
+      "Frontend",
+      "Portfolio",
+      "Vue.js",
+      "Design"
+    ],
+    "date": "Eigen Project"
   }
 ]

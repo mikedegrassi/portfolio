@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
                     Vul het formulier in en ik neem zo snel mogelijk contact met je op.
                 </p>
 
-                <div class="hero-actions">
+                <div class="btn-div">
                     <a href="#contact-form" class="btn btn--outline"><span>Stuur bericht</span></a>
                     <RouterLink to="/" class="btn btn--primary"><span>Terug naar home</span></RouterLink>
                 </div>
@@ -150,8 +150,12 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
-.btn {
-    margin: 0 20px;
+.btn-div a:first-child {
+    margin-right: 20px;
+}
+
+.btn-div {
+    display: flex;
 }
 
 /* ===== Achtergrond ===== */
@@ -379,7 +383,6 @@ textarea:focus {
     color: #d6d6d6;
     font-size: 1rem;
     margin-top: -50px;
-    margin-bottom: 90px;
     letter-spacing: 0.3px;
     opacity: 0.85;
     animation: fadeIn 0.8s ease 0.3s both;
@@ -388,7 +391,6 @@ textarea:focus {
 /* Responsive */
 @media (max-width: 900px) {
     .page-hero {
-        height: auto;
         padding: 100px 0 60px;
     }
 
