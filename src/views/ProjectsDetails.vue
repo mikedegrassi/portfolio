@@ -22,7 +22,6 @@ const sections = computed(() => {
     if (!project.value) return []
     const p = project.value
     return [
-        { key: 'problem', title: 'Probleem', text: p.problem, icon: '⚠️' },
         { key: 'assignment', title: 'Opdracht', text: p.assignment, icon: '📋' },
         { key: 'role', title: 'Mijn rol', text: p.role, icon: '👤' },
         { key: 'result', title: 'Resultaat', text: p.result, icon: '✅' },

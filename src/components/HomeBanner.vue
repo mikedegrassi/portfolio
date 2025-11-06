@@ -23,7 +23,7 @@
                     <a href="#featured-projects" class="btn btn--outline">
                         <span>Lees verder</span>
                     </a>
-                    <button class="btn btn--primary"><span>Contact Me!</span></button>
+                    <RouterLink to="/contact" class="btn btn--primary"><span>Neem contact op!</span></RouterLink>
                 </div>
             </div>
 

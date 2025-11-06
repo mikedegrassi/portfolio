@@ -236,7 +236,7 @@ const paddedLanguages = computed(() => {
     overflow: hidden;
     display: grid;
     place-items: center;
-    transition: transform .2s ease, box-shadow .2s ease;
+    transition: transform .2s ease;
 }
 
 .flagbox img {
@@ -247,7 +247,6 @@ const paddedLanguages = computed(() => {
 
 .skill:hover .flagbox {
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
 }
 
 /* Label */

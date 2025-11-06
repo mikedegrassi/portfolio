@@ -1,5 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted, onBeforeUnmount } from 'vue'
+import emailjs from '@emailjs/browser'
 
 onMounted(() => document.documentElement.classList.add('theme-red'))
 onBeforeUnmount(() => document.documentElement.classList.remove('theme-red'))
@@ -7,6 +8,7 @@ onBeforeUnmount(() => document.documentElement.classList.remove('theme-red'))
 const form = reactive({ name: '', email: '', message: '', hp: '' })
 const status = ref('idle') // 'idle' | 'sending' | 'ok' | 'err'
 const errors = reactive({ name: '', email: '', message: '' })
+const tried = ref(false)  // om errors pas te tonen na 1e submit
 
 const validate = () => {
     errors.name = form.name.trim() ? '' : 'Vul je naam in.'
@@ -16,59 +18,38 @@ const validate = () => {
 }
 
 async function handleSubmit() {
-    if (form.hp) return // simpele bot-block
-    if (!validate()) return
+    if (form.hp) return // honeypot
+    tried.value = true
+
+    if (!validate()) {
+        status.value = 'idle'
+        return
+    }
+
+    status.value = 'sending'
     try {
-        status.value = 'sending'
-        // TODO: vervang door jouw echte endpoint (fetch naar Formspree/backend)
-        await new Promise(r => setTimeout(r, 900))
-        status.value = 'ok'
+        await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            { from_name: form.name, reply_to: form.email, message: form.message },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+
+        status.value = 'ok' // toon succes-blok
+        resetFields()       // velden leeg
+        setTimeout(() => { status.value = 'idle'; tried.value = false }, 6000) // optioneel
     } catch (e) {
+        console.error('Email mislukt:', e)
         status.value = 'err'
     }
 }
 
-function resetForm() {
+function resetFields() {
     form.name = ''
     form.email = ''
     form.message = ''
-    status.value = 'idle'
+    form.hp = ''
 }
-
-// Mouse-follow (tilt + spotlight) op de kaart
-let cardEl
-function onCardMouseMove(e) {
-    const rect = cardEl.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
-    cardEl.style.setProperty('--px', `${x}px`)
-    cardEl.style.setProperty('--py', `${y}px`)
-
-    const midX = rect.width / 2
-    const midY = rect.height / 2
-    const rotY = ((x - midX) / midX) * 4   // links/rechts
-    const rotX = -((y - midY) / midY) * 4  // boven/onder
-    cardEl.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`
-}
-function onCardLeave() {
-    cardEl.style.transform = 'none'
-    cardEl.style.removeProperty('--px')
-    cardEl.style.removeProperty('--py')
-}
-
-onMounted(() => {
-    cardEl = document.querySelector('.contact-card')
-    if (cardEl) {
-        cardEl.addEventListener('mousemove', onCardMouseMove, { passive: true })
-        cardEl.addEventListener('mouseleave', onCardLeave, { passive: true })
-    }
-})
-onBeforeUnmount(() => {
-    if (cardEl) {
-        cardEl.removeEventListener('mousemove', onCardMouseMove)
-        cardEl.removeEventListener('mouseleave', onCardLeave)
-    }
-})
 </script>
 
 <template>
@@ -91,27 +72,29 @@ onBeforeUnmount(() => {
 
             <!-- Kaart met formulier -->
             <div class="contact-card" :class="{ 'is-sending': status === 'sending' }">
-                <form id="contact-form" class="contact-form" novalidate @submit.prevent="handleSubmit">
-                    <!-- honeypot -->
+                <form id="contact-form" class="contact-form" novalidate @submit.prevent="handleSubmit"
+                    v-show="status !== 'ok'" :aria-busy="status === 'sending'">
                     <input class="hp" autocomplete="off" tabindex="-1" v-model="form.hp" />
 
-                    <div class="field" :class="{ invalid: errors.name }">
+                    <div class="field" :class="{ invalid: errors.name && tried }">
                         <label for="name">Naam</label>
-                        <input id="name" v-model="form.name" type="text" placeholder="Jouw naam" />
-                        <small class="error" v-if="errors.name">{{ errors.name }}</small>
+                        <input id="name" v-model.trim="form.name" type="text" :disabled="status === 'sending'"
+                            placeholder="Jouw naam" />
+                        <small class="error" v-if="errors.name && tried">{{ errors.name }}</small>
                     </div>
 
-                    <div class="field two" :class="{ invalid: errors.email }">
+                    <div class="field two" :class="{ invalid: errors.email && tried }">
                         <label for="email">E-mailadres</label>
-                        <input id="email" v-model="form.email" type="email" placeholder="jij@email.nl" />
-                        <small class="error" v-if="errors.email">{{ errors.email }}</small>
+                        <input id="email" v-model.trim="form.email" type="email" :disabled="status === 'sending'"
+                            placeholder="jij@email.nl" />
+                        <small class="error" v-if="errors.email && tried">{{ errors.email }}</small>
                     </div>
 
-                    <div class="field">
+                    <div class="field" :class="{ invalid: errors.message && tried }">
                         <label for="message">Bericht</label>
-                        <textarea id="message" v-model="form.message" rows="6"
+                        <textarea id="message" v-model.trim="form.message" rows="6" :disabled="status === 'sending'"
                             placeholder="Vertel kort waar ik mee kan helpen…"></textarea>
-                        <small class="error" v-if="errors.message">{{ errors.message }}</small>
+                        <small class="error" v-if="errors.message && tried">{{ errors.message }}</small>
                     </div>
 
                     <div class="actions">
@@ -122,13 +105,13 @@ onBeforeUnmount(() => {
                     </div>
                 </form>
 
-                <!-- Succes -->
                 <div class="success" v-if="status === 'ok'">
                     <div class="check">✓</div>
                     <h3>Bericht verzonden!</h3>
                     <p>Bedankt voor je bericht — ik kom bij je terug.</p>
                     <div class="btns">
-                        <button class="btn btn--outline" @click="resetForm">Nog een bericht</button>
+                        <button class="btn btn--outline" @click="status = 'idle'; tried = false">Nog een
+                            bericht</button>
                         <RouterLink to="/" class="btn btn--primary">Terug naar home</RouterLink>
                     </div>
                 </div>
@@ -392,10 +375,6 @@ textarea:focus {
 @media (max-width: 900px) {
     .page-hero {
         padding: 100px 0 60px;
-    }
-
-    .contact-card {
-        margin: 40px 16px 72px;
     }
 }
 </style>
