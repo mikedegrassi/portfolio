@@ -15,7 +15,7 @@
           Ik ben Mike L. Degrassi, afgestudeerd aan de Hogeschool Rotterdam in Creative Media & Game Technologies
           (CMGT).
           Tijdens mijn studie heb ik geleerd om projecten van idee tot eindproduct te realiseren,
-          met aandacht voor zowel design als functionaliteit.
+          met aandacht voor zowel design, functionaliteit, doelgroep en impact.
         </p>
 
         <p class="muted">
@@ -26,14 +26,13 @@
 
         <p class="muted">
           Buiten school om heb ik aan diverse persoonlijke projecten gewerkt — van interactieve websites
-          en prototypes in Figma tot AI-interfaces en custom dashboards.
+          en prototypes in Figma tot het ontwerpen van posters en logo's.
           Ik blijf mezelf ontwikkelen door constant te experimenteren met nieuwe tools en technologieën.
         </p>
 
         <p class="muted">
-          Als ik niet achter mijn scherm zit, ben ik bezig met fitness, designconcepten uitwerken of nieuwe
-          technologieën verkennen. Mijn doel is om mijn creatieve en technische skills te blijven combineren
-          in alles wat ik maak.
+          Als ik niet achter mijn laptop zit, ben ik bezig met sporten, gamen, series en films kijken,
+          mijn verzamelingen uitbreiden, afspreken met vrienden en experimenteer ik met ondernemende ideeën.
         </p>
       </div>
     </div>

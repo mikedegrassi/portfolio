@@ -10,16 +10,17 @@ import { Github, Linkedin, Mail, MessageCircle } from 'lucide-vue-next'
     <div class="container footer-content">
       <!-- Social icons -->
       <div class="socials">
-        <a href="https://github.com/" target="_blank" aria-label="GitHub" class="icon">
+        <a href="https://github.com/mikedegrassi" target="_blank" aria-label="GitHub" class="icon">
           <Github />
         </a>
-        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="icon">
+        <a href="https://www.linkedin.com/in/mike-degrassi-50621023b/" target="_blank" aria-label="LinkedIn"
+          class="icon">
           <Linkedin />
         </a>
-        <a href="mailto:example@mail.com" aria-label="Email" class="icon">
+        <a href="mailto:m.degrassi@hotmail.com" aria-label="Email" class="icon">
           <Mail />
         </a>
-        <a href="https://wa.me/31600000000" target="_blank" aria-label="WhatsApp" class="icon">
+        <a href="https://wa.me/31651854111" target="_blank" aria-label="WhatsApp" class="icon">
           <MessageCircle />
         </a>
       </div>
@@ -81,8 +82,8 @@ import { Github, Linkedin, Mail, MessageCircle } from 'lucide-vue-next'
 
 .icon:hover {
   transform: translateY(-3px);
-  background: rgba(127, 185, 255, 0.15);
-  color: var(--color-primary-hover);
+  background: var(--color-primary);
+  color: var(--color-text);
 }
 
 .icon svg {
