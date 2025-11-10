@@ -1,0 +1,333 @@
+{
+  "index.html": {
+    "file": "assets/index.B-8YZ1h7.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index.Bj07x9Sp.css"
+    ],
+    "assets": [
+      "assets/me.DOxdJ1ig.png",
+      "assets/cv.BF51MJjj.png",
+      "assets/1night.Dix0ZfIw.png",
+      "assets/accessibility-tool.BcohDGxC.png",
+      "assets/ajax.yDhqG88H.png",
+      "assets/andre.iuUh9-x_.png",
+      "assets/ballieu.C0lhXipr.png",
+      "assets/banner.Lu_xGKFI.png",
+      "assets/breakout.eyjtD0eg.png",
+      "assets/chat.D_-XO3eU.png",
+      "assets/collage.DwmrtIsL.png",
+      "assets/comicstories.D2THvjxs.png",
+      "assets/contact-banner.BA9tDQ1B.png",
+      "assets/crud.D0Xyhv1S.png",
+      "assets/cvbeautybrasil.BcXkQF2R.png",
+      "assets/freshwierie.CRH0BCWc.png",
+      "assets/hetjetloket.B5BZUBT3.png",
+      "assets/laravel-magazine.mGpJ9AGo.png",
+      "assets/me2.CWdMGqH8.png",
+      "assets/memorymingle.Dysv6C_C.png",
+      "assets/ml5-breakout.CPX5GggK.png",
+      "assets/portfolio-vue.BGjAj4_I.png",
+      "assets/portfolio.XZqnP6vT.png",
+      "assets/prg06.O6WZaz7P.png",
+      "assets/project-banner.D4RpxoMb.png",
+      "assets/reserveringssysteem-van-scratch.BFRFknAz.png",
+      "assets/robot-wars.C7uSdKM8.png",
+      "assets/robotgenerator.KRXSpstZ.png",
+      "assets/serious-game.DP42asYk.png",
+      "assets/stage.DuCAiQF5.png",
+      "assets/ticket.w-_ZPXVd.png",
+      "assets/unreal.BBsTu0vV.png",
+      "assets/bootstrap.CYQpQbUj.png",
+      "assets/canva.CYOVrFfh.png",
+      "assets/capcut.CQlCVZEB.png",
+      "assets/csharp.Bm-gtdBa.png",
+      "assets/css.KFWuwtD3.png",
+      "assets/engels.CJ5lR6ZJ.png",
+      "assets/expo.DP5jdyRI.png",
+      "assets/express.D2vj1gPy.png",
+      "assets/figma.A3djpbfE.png",
+      "assets/firebase.C-wuwFz5.png",
+      "assets/html.BfkZyh5c.png",
+      "assets/imovie.D2K5-mJo.png",
+      "assets/javascript.DhWaSi0x.png",
+      "assets/laravel.C8fg3juz.png",
+      "assets/lucidchart.Dzi0J5US.png",
+      "assets/maria.DF9pmCA3.png",
+      "assets/miro.BeKVyM2K.png",
+      "assets/mongo.CxLmyoQ0.png",
+      "assets/mysql.BNY22JPV.png",
+      "assets/native.DedNxEMq.png",
+      "assets/netcore.CoMOJck8.png",
+      "assets/node.CQ_aU2H9.png",
+      "assets/php.DxPTnv-g.png",
+      "assets/pixi.DMYuVnjp.png",
+      "assets/postman.B7dhuvZP.png",
+      "assets/react.DuNplJXZ.png",
+      "assets/spline.BLfDzQdF.png",
+      "assets/supabase.DHgp3cjo.png",
+      "assets/typescript.C8g_Wemt.png",
+      "assets/unreal.CofL3NE_.png",
+      "assets/vue.CfSq9TlT.png",
+      "assets/wordpress.kyUc1J9L.png"
+    ]
+  },
+  "src/assets/icons/bootstrap.png": {
+    "file": "assets/bootstrap.CYQpQbUj.png",
+    "src": "src/assets/icons/bootstrap.png"
+  },
+  "src/assets/icons/canva.png": {
+    "file": "assets/canva.CYOVrFfh.png",
+    "src": "src/assets/icons/canva.png"
+  },
+  "src/assets/icons/capcut.png": {
+    "file": "assets/capcut.CQlCVZEB.png",
+    "src": "src/assets/icons/capcut.png"
+  },
+  "src/assets/icons/csharp.png": {
+    "file": "assets/csharp.Bm-gtdBa.png",
+    "src": "src/assets/icons/csharp.png"
+  },
+  "src/assets/icons/css.png": {
+    "file": "assets/css.KFWuwtD3.png",
+    "src": "src/assets/icons/css.png"
+  },
+  "src/assets/icons/engels.png": {
+    "file": "assets/engels.CJ5lR6ZJ.png",
+    "src": "src/assets/icons/engels.png"
+  },
+  "src/assets/icons/expo.png": {
+    "file": "assets/expo.DP5jdyRI.png",
+    "src": "src/assets/icons/expo.png"
+  },
+  "src/assets/icons/express.png": {
+    "file": "assets/express.D2vj1gPy.png",
+    "src": "src/assets/icons/express.png"
+  },
+  "src/assets/icons/figma.png": {
+    "file": "assets/figma.A3djpbfE.png",
+    "src": "src/assets/icons/figma.png"
+  },
+  "src/assets/icons/firebase.png": {
+    "file": "assets/firebase.C-wuwFz5.png",
+    "src": "src/assets/icons/firebase.png"
+  },
+  "src/assets/icons/html.png": {
+    "file": "assets/html.BfkZyh5c.png",
+    "src": "src/assets/icons/html.png"
+  },
+  "src/assets/icons/imovie.png": {
+    "file": "assets/imovie.D2K5-mJo.png",
+    "src": "src/assets/icons/imovie.png"
+  },
+  "src/assets/icons/javascript.png": {
+    "file": "assets/javascript.DhWaSi0x.png",
+    "src": "src/assets/icons/javascript.png"
+  },
+  "src/assets/icons/laravel.png": {
+    "file": "assets/laravel.C8fg3juz.png",
+    "src": "src/assets/icons/laravel.png"
+  },
+  "src/assets/icons/lucidchart.png": {
+    "file": "assets/lucidchart.Dzi0J5US.png",
+    "src": "src/assets/icons/lucidchart.png"
+  },
+  "src/assets/icons/maria.png": {
+    "file": "assets/maria.DF9pmCA3.png",
+    "src": "src/assets/icons/maria.png"
+  },
+  "src/assets/icons/miro.png": {
+    "file": "assets/miro.BeKVyM2K.png",
+    "src": "src/assets/icons/miro.png"
+  },
+  "src/assets/icons/mongo.png": {
+    "file": "assets/mongo.CxLmyoQ0.png",
+    "src": "src/assets/icons/mongo.png"
+  },
+  "src/assets/icons/mysql.png": {
+    "file": "assets/mysql.BNY22JPV.png",
+    "src": "src/assets/icons/mysql.png"
+  },
+  "src/assets/icons/native.png": {
+    "file": "assets/native.DedNxEMq.png",
+    "src": "src/assets/icons/native.png"
+  },
+  "src/assets/icons/netcore.png": {
+    "file": "assets/netcore.CoMOJck8.png",
+    "src": "src/assets/icons/netcore.png"
+  },
+  "src/assets/icons/node.png": {
+    "file": "assets/node.CQ_aU2H9.png",
+    "src": "src/assets/icons/node.png"
+  },
+  "src/assets/icons/php.png": {
+    "file": "assets/php.DxPTnv-g.png",
+    "src": "src/assets/icons/php.png"
+  },
+  "src/assets/icons/pixi.png": {
+    "file": "assets/pixi.DMYuVnjp.png",
+    "src": "src/assets/icons/pixi.png"
+  },
+  "src/assets/icons/postman.png": {
+    "file": "assets/postman.B7dhuvZP.png",
+    "src": "src/assets/icons/postman.png"
+  },
+  "src/assets/icons/react.png": {
+    "file": "assets/react.DuNplJXZ.png",
+    "src": "src/assets/icons/react.png"
+  },
+  "src/assets/icons/spline.png": {
+    "file": "assets/spline.BLfDzQdF.png",
+    "src": "src/assets/icons/spline.png"
+  },
+  "src/assets/icons/supabase.png": {
+    "file": "assets/supabase.DHgp3cjo.png",
+    "src": "src/assets/icons/supabase.png"
+  },
+  "src/assets/icons/typescript.png": {
+    "file": "assets/typescript.C8g_Wemt.png",
+    "src": "src/assets/icons/typescript.png"
+  },
+  "src/assets/icons/unreal.png": {
+    "file": "assets/unreal.CofL3NE_.png",
+    "src": "src/assets/icons/unreal.png"
+  },
+  "src/assets/icons/vue.png": {
+    "file": "assets/vue.CfSq9TlT.png",
+    "src": "src/assets/icons/vue.png"
+  },
+  "src/assets/icons/wordpress.png": {
+    "file": "assets/wordpress.kyUc1J9L.png",
+    "src": "src/assets/icons/wordpress.png"
+  },
+  "src/assets/images/1night.png": {
+    "file": "assets/1night.Dix0ZfIw.png",
+    "src": "src/assets/images/1night.png"
+  },
+  "src/assets/images/accessibility-tool.png": {
+    "file": "assets/accessibility-tool.BcohDGxC.png",
+    "src": "src/assets/images/accessibility-tool.png"
+  },
+  "src/assets/images/ajax.png": {
+    "file": "assets/ajax.yDhqG88H.png",
+    "src": "src/assets/images/ajax.png"
+  },
+  "src/assets/images/andre.png": {
+    "file": "assets/andre.iuUh9-x_.png",
+    "src": "src/assets/images/andre.png"
+  },
+  "src/assets/images/ballieu.png": {
+    "file": "assets/ballieu.C0lhXipr.png",
+    "src": "src/assets/images/ballieu.png"
+  },
+  "src/assets/images/banner.png": {
+    "file": "assets/banner.Lu_xGKFI.png",
+    "src": "src/assets/images/banner.png"
+  },
+  "src/assets/images/breakout.png": {
+    "file": "assets/breakout.eyjtD0eg.png",
+    "src": "src/assets/images/breakout.png"
+  },
+  "src/assets/images/chat.png": {
+    "file": "assets/chat.D_-XO3eU.png",
+    "src": "src/assets/images/chat.png"
+  },
+  "src/assets/images/collage.png": {
+    "file": "assets/collage.DwmrtIsL.png",
+    "src": "src/assets/images/collage.png"
+  },
+  "src/assets/images/comicstories.png": {
+    "file": "assets/comicstories.D2THvjxs.png",
+    "src": "src/assets/images/comicstories.png"
+  },
+  "src/assets/images/contact-banner.png": {
+    "file": "assets/contact-banner.BA9tDQ1B.png",
+    "src": "src/assets/images/contact-banner.png"
+  },
+  "src/assets/images/crud.png": {
+    "file": "assets/crud.D0Xyhv1S.png",
+    "src": "src/assets/images/crud.png"
+  },
+  "src/assets/images/cv.png": {
+    "file": "assets/cv.BF51MJjj.png",
+    "src": "src/assets/images/cv.png"
+  },
+  "src/assets/images/cvbeautybrasil.png": {
+    "file": "assets/cvbeautybrasil.BcXkQF2R.png",
+    "src": "src/assets/images/cvbeautybrasil.png"
+  },
+  "src/assets/images/freshwierie.png": {
+    "file": "assets/freshwierie.CRH0BCWc.png",
+    "src": "src/assets/images/freshwierie.png"
+  },
+  "src/assets/images/hetjetloket.png": {
+    "file": "assets/hetjetloket.B5BZUBT3.png",
+    "src": "src/assets/images/hetjetloket.png"
+  },
+  "src/assets/images/laravel-magazine.png": {
+    "file": "assets/laravel-magazine.mGpJ9AGo.png",
+    "src": "src/assets/images/laravel-magazine.png"
+  },
+  "src/assets/images/me.png": {
+    "file": "assets/me.DOxdJ1ig.png",
+    "src": "src/assets/images/me.png"
+  },
+  "src/assets/images/me2.png": {
+    "file": "assets/me2.CWdMGqH8.png",
+    "src": "src/assets/images/me2.png"
+  },
+  "src/assets/images/memorymingle.png": {
+    "file": "assets/memorymingle.Dysv6C_C.png",
+    "src": "src/assets/images/memorymingle.png"
+  },
+  "src/assets/images/ml5-breakout.png": {
+    "file": "assets/ml5-breakout.CPX5GggK.png",
+    "src": "src/assets/images/ml5-breakout.png"
+  },
+  "src/assets/images/portfolio-vue.png": {
+    "file": "assets/portfolio-vue.BGjAj4_I.png",
+    "src": "src/assets/images/portfolio-vue.png"
+  },
+  "src/assets/images/portfolio.png": {
+    "file": "assets/portfolio.XZqnP6vT.png",
+    "src": "src/assets/images/portfolio.png"
+  },
+  "src/assets/images/prg06.png": {
+    "file": "assets/prg06.O6WZaz7P.png",
+    "src": "src/assets/images/prg06.png"
+  },
+  "src/assets/images/project-banner.png": {
+    "file": "assets/project-banner.D4RpxoMb.png",
+    "src": "src/assets/images/project-banner.png"
+  },
+  "src/assets/images/reserveringssysteem-van-scratch.png": {
+    "file": "assets/reserveringssysteem-van-scratch.BFRFknAz.png",
+    "src": "src/assets/images/reserveringssysteem-van-scratch.png"
+  },
+  "src/assets/images/robot-wars.png": {
+    "file": "assets/robot-wars.C7uSdKM8.png",
+    "src": "src/assets/images/robot-wars.png"
+  },
+  "src/assets/images/robotgenerator.png": {
+    "file": "assets/robotgenerator.KRXSpstZ.png",
+    "src": "src/assets/images/robotgenerator.png"
+  },
+  "src/assets/images/serious-game.png": {
+    "file": "assets/serious-game.DP42asYk.png",
+    "src": "src/assets/images/serious-game.png"
+  },
+  "src/assets/images/stage.png": {
+    "file": "assets/stage.DuCAiQF5.png",
+    "src": "src/assets/images/stage.png"
+  },
+  "src/assets/images/ticket.png": {
+    "file": "assets/ticket.w-_ZPXVd.png",
+    "src": "src/assets/images/ticket.png"
+  },
+  "src/assets/images/unreal.png": {
+    "file": "assets/unreal.BBsTu0vV.png",
+    "src": "src/assets/images/unreal.png"
+  }
+}
