@@ -112,7 +112,7 @@ function resetFields() {
                     <div class="btns">
                         <button class="btn btn--outline" @click="status = 'idle'; tried = false">Nog een
                             bericht</button>
-                        <RouterLink to="/" class="btn btn--primary">Terug naar home</RouterLink>
+                        <RouterLink to="/" class="btn btn--primary"><span>Terug naar home</span></RouterLink>
                     </div>
                 </div>
 
