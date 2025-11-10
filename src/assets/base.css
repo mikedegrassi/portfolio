@@ -194,6 +194,64 @@
       transform 0.15s ease;
   }
   .btn:active { transform: translateY(1px); }
+
+
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+/* De “vul-laag” */
+.btn--primary {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: .95rem;
+  font-weight: 500;
+  transition: color 0.4s ease;
+}
+
+.btn--primary:hover {
+  color: white !important;
+}
+
+.btn--primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.btn--primary:hover::before {
+  transform: scaleX(1);
+}
+
+.btn--primary,
+.btn--primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn--primary:hover {
+  color: #000;
+}
   
   /* Inputs / textareas */
   input,
